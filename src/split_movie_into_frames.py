@@ -1,8 +1,8 @@
 import cv2
 import os
 
-video_path = os.path.abspath('/home/olinger/PycharmProjects/photogrammetrieWithPython/data/movie')
-output_folder = os.path.abspath('/home/olinger/PycharmProjects/photogrammetrieWithPython/data/frames')
+video_path = os.path.abspath('/home/olinger/PycharmProjects/photogrammetrieWithPython/data/movie/calibrate_square.MOV')
+output_folder = os.path.abspath('/home/olinger/PycharmProjects/photogrammetrieWithPython/data/calibrate_frames')
 
 
 def extract_frames(video_path, output_folder):
