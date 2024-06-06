@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Install the SSH key
+mkdir -p /home/regnilo/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvSRX2QsGdMjOoBTUJEpeYQMpRWH6dxO5ERNCkPSbL1Sf2xWypsV03Qwu3LPDCfNhSLCaHNLsHXUngpqcUJpo9lZ72JkLas15qG4/x/LFwcRwg7qsmEykw3IOTdDtDmejMhL+7BZvNEerS4T0l/1uXdLj7cx5InqGJqwQz8rAyL8BazlPnueLZbbfFiiyq3tC38uu0tlVUJp5ZupKtfi2sMewz3LAkGKQ9hbE4bd28ORNfjF9Lnh4xSc+Rx4OU5D2b3HE8OI3m+alFTqhR9lwnnnFza4XCHgUJdmlKz2/ODrz53zxB/pRd21oAN500DdlakCmuZJ8hFWKu0ND55Ld8fLrxSTEu7jNzfegrnYxeIo0m/NDpag8v5DnQ3Y+ScXWsZ2wH0oSKaqjy/3d32goEzLUo48KdAtbdJJty/Xe12IqsOUbwo17yGs6TyPczblS/4jPirC+9vR9RdxPsjC5GuaQw2yxQsFl8oKKwdVinHGIdUN0lh6ZjLYYLkdHJdfsPfiKW1HSpNIgljGRVlNOkMaLPlS5GfTQ+JWMIio1nT9GMahfXVaKmv4HtNb+cUZ3jxyvA2wYFAw9kHZapA2pW9DPGqKd2N8gN5NWMyUn6axxDZc/i5Witi7ff7VtbnleFNwKYfWeHIE/lHjI4zLa7Haj6q79ZdubpSm6Vk0EJWw== olinger@olinger-desktop" > /home/regnilo/.ssh/authorized_keys
+chown -R regnilo:regnilo /home/regnilo/.ssh
+# configuration for sudo without password
+echo "regnilo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/regnilo
+chmod 440 /etc/sudoers.d/regnilo
